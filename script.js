@@ -21,6 +21,8 @@ for( let i = 0; i < 1000000000; i++){
 
 */
 
+/*
+
 const prom = new Promise((resolve, reject) => {
         if( new Date() < new Date("01-01-2024")){
             reject(new Error("Error"));
@@ -53,3 +55,21 @@ timeOut(2).then(() => {
     console.log("Everything is fine")
     return timeOut(2);
 });
+
+*/
+
+const prom = new Promise((resolve) => {
+    console.log("Some text");
+
+    setTimeout(() => {
+        resolve("Resolved");
+    }, 1000);
+})
+
+prom.then((data) => console.log(data));
+
+Promise.resolve("Success").then((data) => {
+    console.log(data);
+});
+
+
